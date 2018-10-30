@@ -1,0 +1,89 @@
+.card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    padding-top: 21px;
+    padding-left: 49px;
+    margin-bottom: 25px;
+    background: url(../assets/img/card-bg-default.png) top left no-repeat;
+    cursor: pointer;
+
+    &:hover {
+        background: url(../assets/img/card-bg-hover.png) top left no-repeat;
+        .card__weight {
+            background-color: #2EA8E6;
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--selected {
+        background: url(../assets/img/card-bg-active.png) top left no-repeat;
+        .card__weight {
+            background-color: #D91667;
+        }
+    }
+
+    &__text {        
+        display: block;
+        margin-bottom: 6px;
+        font-family: 'Trebuchet MS';
+        font-size: 16px;
+        color: #666666;
+    }
+    &__title {
+        font-family: 'Trebuchet MS';
+        font-size: 48px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        color: #000000;
+    }
+    &__filling {
+        margin-bottom: 15px;
+        font-family: 'Trebuchet MS';
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: #000000;
+    }
+    &__dis {
+        span, i {
+            display: block;
+            font-family: 'Trebuchet MS';
+            font-size: 14px;
+            line-height: 16px;
+            color: #666666;
+        }
+        i {
+            display: inline;
+            font-weight: bold;
+            font-style: normal;
+        }
+    }
+    &__weight {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        width: 81px;
+        height: 81px;
+        padding-top: 13px;
+        background-color: #0099cc;
+        border-radius: 50%;
+
+        i, span {
+            display: block;
+            text-align: center;
+            font-style: normal;
+            font-family: 'Trebuchet MS';
+            font-size: 42px;
+            line-height: 36px;
+            color: #fff;
+        }
+        span {
+            font-size: 21px;
+            line-height: 23px;
+        }
+    }
+}

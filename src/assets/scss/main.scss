@@ -1,0 +1,41 @@
+@import 'normalize';
+@font-face {
+	font-family: 'Exo2.0-Thin';
+	src: url('../fonts/Exo2.0-Thin.eot');
+    src: local('☺'),url('../fonts/Exo2.0-Thin.woff') format('woff'), 
+                    url('../fonts/Exo2.0-Thin.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Trebuchet MS';
+	src: url('../fonts/trebuc.eot');
+    src: local('☺'), url('../fonts/trebuc.woff') format('woff'), 
+    url('../fonts/trebuc.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}    
+
+a, button, input, textarea, select {
+    font-family: 'Exo2.0-Thin';
+    text-decoration: none;
+    outline: none;
+}    
+
+body {
+    font-family: 'Exo2.0-Thin';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} 
