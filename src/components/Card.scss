@@ -21,7 +21,8 @@
         margin-right: 0;
     }
 
-    &--selected {
+    &--selected,
+    &--selected:hover {
         .card__head,
         .card__body,
         .card__head::before {
@@ -31,7 +32,7 @@
             background-color: #D91667;
         }
     }
-    &--selected:hover {
+    &--has-hover:hover {
         .card__head,
         .card__body,
         .card__head::before {
@@ -41,7 +42,6 @@
             background-color: #E52E7A;
         }
     }
-
     &--disabled {
         .card__head,
         .card__body,
