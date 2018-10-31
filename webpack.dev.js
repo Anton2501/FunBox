@@ -48,7 +48,7 @@ module.exports = {
                     }
                 }
             },
-            {   test: /\.js$/, enforce: "pre", loader: "source-map-loader" },
+            {   test: /\.(js|jsx)?$/, enforce: "pre", loader: "source-map-loader" },
             {
                 test: /\.(sass|scss|css)?$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
