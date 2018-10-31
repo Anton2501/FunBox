@@ -31,7 +31,7 @@ const listData = [
         isCustomerHappy: true,
         weight: 5,
         isActive: false,
-        isDisabled: false
+        isDisabled: true
     }
 ];
 
@@ -40,9 +40,12 @@ export class Main extends React.Component {
         listData: listData
     }
 
-    onSetActiveItem = (index) => {
+    onToggleActiveItem = (index) => {
         console.log(123);
         let newListData = [...this.state.listData];
+        if(newListData[index].isDisabled) {
+            return;
+        }
         let isActive = newListData[index].isActive;
         newListData[index].isActive = !isActive;
         this.setState({ listData: newListData });
@@ -60,7 +63,7 @@ export class Main extends React.Component {
                                     mouses={item.mouses} 
                                     isCustomerHappy={item.isCustomerHappy} 
                                     weight={item.weight}
-                                    onSetActiveItem={() => this.onSetActiveItem(i)}
+                                    onToggleActiveItem={() => this.onToggleActiveItem(i)}
                                     isActive={item.isActive}
                                     key={item.index}
                                     disabled={item.isDisabled}

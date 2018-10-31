@@ -2,14 +2,16 @@
     position: relative;
     width: 320px;
     height: 480px;
-    padding-top: 21px;
-    padding-left: 49px;
-    margin-bottom: 25px;
-    background: url(../assets/img/card-bg-default.png) top left no-repeat;
+    margin-bottom: 75px;
+    border-radius: 12px;
     cursor: pointer;
 
     &:hover {
-        background: url(../assets/img/card-bg-hover.png) top left no-repeat;
+        .card__head,
+        .card__body,
+        .card__head::before {
+            border-color: #2EA8E6;
+        }
         .card__weight {
             background-color: #2EA8E6;
         }
@@ -20,15 +22,128 @@
     }
 
     &--selected {
-        background: url(../assets/img/card-bg-active.png) top left no-repeat;
+        .card__head,
+        .card__body,
+        .card__head::before {
+            border-color: #D91667;
+        }
         .card__weight {
             background-color: #D91667;
         }
     }
+    &--selected:hover {
+        .card__head,
+        .card__body,
+        .card__head::before {
+            border-color: #E52E7A;
+        }
+        .card__weight {
+            background-color: #E52E7A;
+        }
+    }
+
+    &--disabled {
+        .card__head,
+        .card__body,
+        .card__head::before {
+            border-color: #B3B3B3;
+        }
+        .card__head::after {
+            border-right-color: #F9F9F9;
+        }
+        .card__weight {
+            background-color: #B3B3B3;
+        }
+        .card__body::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 0 0 12px 12px;
+        }
+        .card__body::after {
+            position: absolute;
+            content: '';
+            top: -37px;
+            right: 0;
+            width: 275px;
+            height: 37px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 0 12px 0 0;
+        }
+    }
+    &--disabled:hover {
+        cursor: default;
+        .card__head,
+        .card__body,
+        .card__head::before {
+            border-color: #B3B3B3;
+        }
+        .card__weight {
+            background-color: #B3B3B3;
+        }
+        
+    }
+
+    &__head {
+        position: relative;
+        width: 279px;
+        height: 41px;
+        margin-left: auto;
+        padding-top: 18px;
+        padding-left: 7px;
+        border-top: 4px solid #1698D9;
+        border-right: 4px solid #1698D9;
+        border-top-right-radius: 12px;
+        background-color: #F2F2F2;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 11px;
+            left: -36px;
+            width: 59px;
+            height: 35px;
+            border-top: 4px solid #1698D9;
+            transform: rotate(-45deg);
+            z-index: 5;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: 28px;
+            left: -32px;
+            width: 47px;
+            height: 0px;
+            border: 26px solid transparent;
+            border-right-color: #F2F2F2;
+            transform: rotate(225deg);
+        }
+    }
+
+    &__body {
+        position: relative;
+        height: calc(100% - 41px);
+        padding-left: 44px;
+        padding-top: 5px;
+        border-bottom: 4px solid #1698D9;
+        border-right: 4px solid #1698D9;
+        border-left: 4px solid #1698D9;
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        background-color: #fff;
+        background: url(../assets/img/cat.png) top left no-repeat;
+        background-size: 370px 361px;
+        background-position: -28px 166px;
+        background-color: #F2F2F2;
+    }
 
     &__text {        
+        position: relative;
         display: block;
-        margin-bottom: 6px;
         font-family: 'Trebuchet MS';
         font-size: 16px;
         color: #666666;
@@ -64,11 +179,11 @@
     }
     &__weight {
         position: absolute;
-        right: 15px;
-        bottom: 15px;
+        right: 11px;
+        bottom: 11px;
         width: 81px;
         height: 81px;
-        padding-top: 13px;
+        padding-top: 14px;
         background-color: #0099cc;
         border-radius: 50%;
 
@@ -84,6 +199,32 @@
         span {
             font-size: 21px;
             line-height: 23px;
+        }
+    }
+    &__message {
+        position: absolute;
+        bottom: -29px;
+        left: 0;
+        width: 100%;
+        font-family: 'Trebuchet MS';
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 13px;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: default;
+
+        i {
+            border-bottom: 1px dashed #0099cc;
+            font-style: normal;
+            font-weight: bold;
+            color: #0099cc;
+            cursor: pointer;
+        }
+
+        &--is-over {
+            color: #FFFF66;
         }
     }
 }
