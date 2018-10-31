@@ -52,7 +52,7 @@ export class Main extends React.Component {
 
     render() {
         return (
-            <main className='main'>
+            <div className='main'>
                 <div className='main__container'>
                     <h1 className='main__title'>Ты сегодня покормил кота?</h1>
                     <ul className='cards-list'>
@@ -70,7 +70,7 @@ export class Main extends React.Component {
                         ))}
                     </ul>
                 </div>                
-            </main>
+            </div>
         )
     }
 };

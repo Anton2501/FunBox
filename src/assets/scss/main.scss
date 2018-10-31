@@ -1,17 +1,17 @@
 @import 'normalize';
 @font-face {
-	font-family: 'Exo2.0-Thin';
-	src: url('../fonts/Exo2.0-Thin.eot');
-    src: local('☺'),url('../fonts/Exo2.0-Thin.woff') format('woff'), 
-                    url('../fonts/Exo2.0-Thin.ttf') format('truetype');
+	font-family: 'Exo2.0-Thin';	
+    src: url('../fonts/Exo2.0-Thin.woff') format('woff'), 
+         url('../fonts/Exo2.0-Thin.ttf') format('truetype');
+    src: url('../fonts/Exo2.0-Thin.eot');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebuc.eot');
-    src: local('☺'), url('../fonts/trebuc.woff') format('woff'), 
-    url('../fonts/trebuc.ttf') format('truetype');
+	font-family: 'Trebuchet MS';	
+    src: url('../fonts/trebuc.woff') format('woff'), 
+         url('../fonts/trebuc.ttf') format('truetype');
+    src: url('../fonts/trebuc.eot');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -19,7 +19,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
+    -webkit-font-smoothing: antialiased;
 }    
 
 ul, li {
