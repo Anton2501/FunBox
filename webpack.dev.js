@@ -33,7 +33,7 @@ module.exports = {
         quiet: true,
         historyApiFallback: true,
         port: 3000,
-        //host: '192.168.0.101',
+        host: '192.168.0.101',
         open: true
     },    
     module: {
