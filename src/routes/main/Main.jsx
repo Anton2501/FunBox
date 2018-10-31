@@ -41,7 +41,6 @@ export class Main extends React.Component {
     }
 
     onToggleActiveItem = (index) => {
-        console.log(123);
         let newListData = [...this.state.listData];
         if(newListData[index].isDisabled) {
             return;
